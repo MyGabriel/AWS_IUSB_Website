@@ -1,0 +1,71 @@
+<!-- File: register.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IUSB Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">IUSB</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<div class="section">
+    <div class="card">
+        <h1>Account Registration</h1>
+
+        <form onsubmit="submitRegistration(event)">
+            <label>First Name</label>
+            <input id="fname" required>
+
+            <label>Last Name</label>
+            <input id="lname" required>
+
+            <label>Email</label>
+            <input id="email" type="email" required>
+
+            <label>Password</label>
+            <input id="password" type="password" required>
+
+            <label>Student ID</label>
+            <input id="studentid" required>
+
+            <label>Account Type</label>
+            <select id="accounttype" required>
+                <option value="Savings">Savings</option>
+                <option value="Student">Student</option>
+                <option value="International">International</option>
+            </select>
+
+            <label>Country</label>
+            <input id="country" required>
+
+            <label>Phone Number</label>
+            <input id="phone" required>
+
+            <button type="submit">Register Account</button>
+        </form>
+
+        <p id="visitor-count" style="margin-top:15px; font-weight:600;"></p>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
+
+<!-- IU-International University of Applied Sciences
+     Course Code: DLBSEPCP01_E
+     Author: Gabriel Manu
+     Matriculation ID: 9212512
+ -->
