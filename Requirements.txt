@@ -1,39 +1,41 @@
 1. Python
-    Python 3.14.2 was used for this project, any current version of Python can be use.
+    Python 3.14.2 was used for this project (any current version of Python can be used).
 
 2. vevn
-    Virtal environment in Pycharm IDE was used for this project.
+    A virrtual environment in PyCharm IDE was used for this project.
 
 3. Amazon Web Services Command Line Interface (AWS CLI)
-    Can be intall throug PyCharm's plugin packages service or from
+    Can be intalled through the PyCharm plugin packages service or from
         https://docs.aws.amazon.com/cli/v1/userguide/install-windows.html
-    To varify, run
-        aws --version
-    To Configure AWS Cli on PyCharm for IaC deployment,
+    To verify, run
+        aws --version          # The version should print out.
+
+    To Configure AWS CLI on PyCharm for IaC deployment,
     Get access_key, secret_key, and region from your AWS console.
-    Then, run
-        aws configure
-    Then follow the prompt (example)
-        AWS Access Key ID [None]: AKIAxxxxxxxx
-        AWS Secret Access Key [None]: xxxxxxxxxxxxx
-        Default region name [None]: us-east-1
-        Default output format [None]: json
 
 4. Terraform
-    Can be intall throug PyCharm's plugin packages service or from
+    Can be intalled through the PyCharm plugin packages service or from
         https://www.jetbrains.com/help/pycharm/terraform.html#anr0a5_19
-    To varify, run
-        terraform -version
+    To verify, run
+        terraform -version     # The version should print out.
+
+    To configure Terraform to conneting to the AWS console, run the following
+        aws configure
+
+        ## Should output the following one after the other
+        AWS Access Key ID [None]: AKIAxxxxxxxx          # use access key from AWS: In IAM mode
+        AWS Secret Access Key [None]: xxxxxxxxxxxxx     # use secret access key from AWS: In mode IAM
+        Default region name [None]: us-east-1           # optional, it will be specified in the "main.tf"
 
 5. Node.js
-    Can be intall throug PyCharm's plugin packages service or from
+    Can be intalled through the PyCharm plugin packages service or from
         https://nodejs.org/en/download
-    To varify, run
-        node -v  # Should print "v24.13.0"
-        npm -v # Should print "11.6.2".
+    To verify, run
+        node -v         # Output example "v24.13.0"
+        npm -v          # Output example "11.6.2".
 
-        cd lambda
-        npm init -y        # Automatically generates "package.json" file inthe lambda folder
+        cd lambda                  # Run the following while in the "lambda" directory
+        npm init -y                # Automatically generates "package.json" file inthe lambda folder
         npm install aws-sdk        # Automatically generates "package-lock.json" in the lambda folder
-        Compress-Archive -Path * -DestinationPath ../lambda_function.zip    # Create zip (include node_modules) in the project folder
+        Compress-Archive -Path * -DestinationPath ../lambda_function.zip            # Create zip (include node_modules) in the project folder
 
